@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
 import { Constants, WebBrowser, LinearGradient } from 'expo';
+import Logo from './assets/wowi.png'
 
 
 export default class App extends React.Component {
@@ -23,8 +24,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <LinearGradient colors={['#5161B9', '#9C69CC']} style={{ position: 'absolute', height: 900, width: 400 }} />
-       
-       <Text style={{color: 'white', fontSize: 20 }}>CLICK TO WOW{"\n"}{"\n"}</Text>
+
+        <Image style={{ width: 200, height: 150 }} source={Logo}/>
 
         <TouchableOpacity onPress={() => this.Play()}> 
           <Image style={{ width: 200, height: 200 }}source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Perspective-Button-Stop-icon.png'}} />
