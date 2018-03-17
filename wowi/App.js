@@ -1,7 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Constants, WebBrowser, LinearGradient } from 'expo';
-import Logo from './assets/wowi.png'
+import Logo from './assets/wowi.png';
+import ButtonPicture from './assets/button.png';
+import OwenWilson from './assets/owenwilson.jpg';
 
 
 export default class App extends React.Component {
@@ -28,8 +30,8 @@ export default class App extends React.Component {
         <Image style={{ width: 200, height: 150 }} source={Logo}/>
 
         <TouchableOpacity onPress={() => this.Play()}> 
-          <Image style={{ width: 200, height: 200 }}source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Perspective-Button-Stop-icon.png'}} />
-          <Image style={{ position: 'absolute', width: 100, height: 100, marginLeft: 50, marginTop: 25 }}source={{ uri: 'https://cdn.famousoutfits.com/wp-content/uploads/2014/12/owen-wilson.png'}} />
+          <Image style={{ width: 200, height: 200 }}source={ButtonPicture} />
+          <Image style={{ position: 'absolute', width: 100, height: 100, marginLeft: 50, marginTop: 25 }}source={OwenWilson} />
         </TouchableOpacity>
 
       </View>
