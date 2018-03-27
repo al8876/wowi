@@ -1,9 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { Constants, WebBrowser, LinearGradient } from 'expo';
 import Logo from './assets/wowi.png';
 import ButtonPicture from './assets/button.png';
 import OwenWilson from './assets/owenwilson.jpg';
+
+
+const { width, height } = Dimensions.get('window');
 
 
 export default class App extends React.Component {
@@ -25,7 +28,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
 
-        <LinearGradient colors={['#5161B9', '#9C69CC']} style={{ position: 'absolute', height: 900, width: 400 }} />
+        <LinearGradient colors={['#5161B9', '#9C69CC']} style={{ position: 'absolute', height: height, width: width }} />
 
         <Image style={{ width: 200, height: 150 }} source={Logo}/>
 
